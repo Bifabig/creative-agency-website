@@ -2,6 +2,7 @@
 
 :root {
   --primary-color: #f60f20;
+  --secondary-color: #1b206e;
 }
 
 * {
@@ -175,7 +176,7 @@ section.home {
   font-size: 24px;
   font-weight: 500;
   margin-top: 20px;
-  color: #1b206e;
+  color: var(--secondary-color);
 }
 
 .services .service .icon img {
@@ -283,7 +284,7 @@ section.home {
 }
 
 .contact-form .row input[type="submit"] {
-  background-color: #1b206e;
+  background-color: var(--secondary-color);
   color: #fff;
   margin: 0;
   text-transform: uppercase;
@@ -291,6 +292,33 @@ section.home {
   font-weight: 300;
   border: 0;
   cursor: pointer;
+}
+
+.contact-info {
+  width: 350px;
+  background: #f9f9f9;
+  padding: 60px 40px 20px;
+}
+
+.contact-info .info-box {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.contact-info .info-box .contact-icon {
+  width: 20px;
+  margin-right: 40px;
+}
+
+.contact-info .info-box .details h4 {
+  color: var(--secondary-color);
+}
+
+.contact-info .info-box .details p,
+.contact-info .info-box .details a {
+  color: #111;
+  text-decoration: none;
 }
 
 @media (max-width: 1068px) {
@@ -315,6 +343,21 @@ section.home {
   .services {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .contact {
+    flex-direction: column;
+  }
+
+  .contact-form {
+    width: 100%;
+    padding: 30px 30px 20px;
+  }
+
+  .contact-info {
+    width: 100%;
+    margin-top: 20px;
+    padding: 30px 30px 20px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -324,5 +367,15 @@ section.home {
 
   .services .service {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .contact-form .row {
+    flex-direction: column;
+  }
+
+  .contact-form .input50,
+  .contact-form .input100 {
+    width: 100%;
+    margin: 0;
   }
 }
